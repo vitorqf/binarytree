@@ -39,7 +39,7 @@ TreeNode* insert(TreeNode** root, int data) {
     TreeNode* parent = search(*root, data);
 
     if (newNode->data == parent->data) {
-        cout << "Node with the same value (17) already exists in the tree. Skipping." << endl;
+        cout << "Node with the same value"  << " (" << newNode->data << ") " << "already exists in the tree. Skipping." << endl;
         return nullptr;
     }
 
@@ -77,7 +77,6 @@ void print(TreeNode* root, int level = 0) {
         return;
     }
 
-    print(root->right, level + 1);
     
     for (int i = 0; i < level; i++) {
         cout << "-";
@@ -86,6 +85,7 @@ void print(TreeNode* root, int level = 0) {
     cout << root->data << endl;
 
     print(root->left, level + 1);
+    print(root->right, level + 1);
 }
 
 
