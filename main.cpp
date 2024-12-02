@@ -102,8 +102,11 @@ int main()
     insert(&tree.root, 11);
     insert(&tree.root, 17);
     insert(&tree.root, 17);
+    insert(&tree.root, 18);
+    insert(&tree.root, 19);
+    insert(&tree.root, 20);
+    insert(&tree.root, 16);
 
-    cout << "Find out 17 in the tree: " << search(tree.root, 17)->data << endl;
     cout << "Size of the tree: " << size(tree.root) << endl;
     cout << "Leaf count: " << leafCount(tree.root) << endl << endl;
 
