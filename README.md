@@ -1,89 +1,89 @@
-# Árvore Binária em C++
+# Binary Search Tree in C++
 
-## Introdução
+## Introduction
 
-Este projeto implementa uma **Árvore Binária de Busca** (Binary Search Tree - BST) em C++. A estrutura de dados árvore binária é fundamental em ciência da computação, oferecendo operações eficientes de inserção, busca e remoção de elementos.
+This project implements a Binary Search Tree (BST) in C++.
+Binary trees are a fundamental data structure in computer science, providing efficient operations for the insertion, search, and removal of elements.
 
-## Estrutura de Dados
+## Data Structure
 
 ### `TreeNode`
 
-Representa um nó da árvore binária.
+Represents a node in the binary tree.
 
-- **Atributos:**
-  - `int data`: Armazena o valor do nó.
-  - `TreeNode* left`: Ponteiro para o filho à esquerda.
-  - `TreeNode* right`: Ponteiro para o filho à direita.
+- **Attributes:**
+  - `int data`: Stores the node's value.
+  - `TreeNode* left`: Pointer to the left child.
+  - `TreeNode* right`: Pointer to the right child.
 
 ### `BinaryTree`
 
-Gerencia a raiz da árvore binária.
+Manages the root of the binary tree.
 
-- **Atributo:**
-  - `TreeNode* root`: Ponteiro para a raiz da árvore.
+- **Attribute:**
+  - `TreeNode* root`: Pointer to the root of the tree.
 
-## Funcionalidades
+## Functionalities
 
-### Inserção (`insert`)
+### Insertion (`insert`)
 
-Adiciona um novo nó à árvore. Se o valor já existir, a inserção é ignorada para manter a unicidade dos elementos.
+Adds a new node to the tree. If the value already exists, the insertion is ignored to maintain the uniqueness of elements.
 
-### Remoção (`remove`)
+### Removal (`remove`)
 
-Remove um nó da árvore. Existem três casos a serem considerados:
+Removes a node from the tree. There are three cases to consider:
 
-1. Nó sem filhos (folha).
-2. Nó com um único filho.
-3. Nó com dois filhos: substitui pelo menor nó da subárvore direita.
+1. Node with no children (leaf).
+2. Node with a single child.
+3. Node with two children: it is replaced by the smallest node in the right subtree.
 
-### Busca (`search`)
+### Search (`search`)
 
-Localiza um nó na árvore com base no valor fornecido. Retorna o nó encontrado ou o nó mais próximo se o valor não existir.
+Finds a node in the tree based on the provided value. Returns the found node or the closest node if the value does not exist.
 
-### Percursos
+### Traversals
 
-- **Inorder (`inorder`)**: Percorre a árvore em ordem crescente.
-- **Preorder (`preorder`)**: Visita a raiz antes dos filhos.
-- **Postorder (`postorder`)**: Visita a raiz após os filhos.
-- **Levelorder (`levelorder`)**: Percorre a árvore nível a nível usando uma fila.
+- **Inorder (`inorder`)**: Traverses the tree in ascending order.
+- **Preorder (`preorder`)**: Visits the root before the children.
+- **Postorder (`postorder`)**: Visits the root after the children.
+- **Levelorder (`levelorder`)**: Traverses the tree level by level using a queue.
 
-### Contagens
+### Counts
 
-- **Número de Nós (`nodes`)**: Retorna a quantidade total de nós na árvore.
-- **Número de Folhas (`leaves`)**: Retorna a quantidade de folhas (nós sem filhos).
+- **Number of Nodes (`nodes`)**: Returns the total number of nodes in the tree.
+- **Number of Leaves (`leaves`)**: Returns the number of leaves (nodes without children).
 
-### Impressão (`print`)
+### Printing (`print`)
 
-Exibe a estrutura da árvore de forma hierárquica, representando os níveis com hífens.
+Displays the tree structure hierarchically, representing levels with hyphens.
 
-### Geração de Árvore (`generate`)
+### Tree Generation (`generate`)
 
-Preenche a árvore com um conjunto pré-definido de valores para facilitar testes e demonstrações.
+Fills the tree with a predefined set of values to facilitate testing and demonstrations.
 
-## Interface de Usuário
+## User Interface
 
-A função `menu` oferece um menu interativo que permite ao usuário realizar as seguintes operações:
+The `menu` function offers an interactive menu that allows the user to perform the following operations:
 
-1. **Inserir**: Adicionar um novo valor à árvore.
-2. **Tamanho**: Exibir o número de nós na árvore.
-3. **Contagem de Folhas**: Mostrar quantas folhas existem na árvore.
-4. **Imprimir**: Exibir a estrutura da árvore.
-5. **Remover**: Eliminar um valor específico da árvore.
-6. **Gerar**: Popular a árvore com valores padrão.
-7. **Inorder**: Executar o percurso inorder.
-8. **Preorder**: Executar o percurso preorder.
-9. **Postorder**: Executar o percurso postorder.
-10. **Levelorder**: Executar o percurso levelorder.
+1. **Insert**: Add a new value to the tree.
+2. **Size**: Display the number of nodes in the tree.
+3. **Leaf Count**: Show how many leaves are in the tree.
+4. **Print**: Display the tree structure.
+5. **Remove**: Delete a specific value from the tree.
+6. **Generate**: Populate the tree with default values.
+7. **Inorder**: Perform an inorder traversal.
+8. **Preorder**: Perform a preorder traversal.
+9. **Postorder**: Perform a postorder traversal.
+10. **Levelorder**: Perform a levelorder traversal.
 
-- **-1. Sair**: Encerrar o programa.
+- **-1. Exit**: Terminate the program.
 
-## Considerações Finais
+## Final Considerations
 
-Esta implementação oferece uma base sólida para entender e manipular árvores binárias de busca em C++. É uma excelente ferramenta para aprendizado e pode ser expandida com funcionalidades adicionais, como balanceamento da árvore ou representação visual mais avançada.
+This implementation provides a solid foundation for understanding and manipulating binary search trees in C++. It is an excellent tool for learning and can be expanded with additional features, such as tree balancing or more advanced visual representation.
 
-## Como Executar
+## How to Run
 
-1. **Compilar**:
+1. **Compile**:
    ```bash
    g++ -o binarytree main.cpp
-   ```
